@@ -1,0 +1,18 @@
+<div class="note-details">
+    <mat-label class="login-label" color="primary">{{actionLabel}}</mat-label>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="addnew-form" [formGroup]="formGroup" (ngSubmit)="saveNoteProcess()" >
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Title" formControlName="title">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Body</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..." class="textarea-height" formControlName="body"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button [mat-dialog-close]="true" type="submit" cdkFocusInitial>{{actionBtn}}</button>
+        </mat-dialog-actions>
+    </form>
+</div>
