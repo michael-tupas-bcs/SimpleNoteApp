@@ -24,7 +24,6 @@ export class NoteCardComponent implements OnInit {
   @ViewChild(NoteDetailsComponent) noteDetail?: NoteDetailsComponent;
 
   ngOnInit() {
-    // console.log(this.title);
   }
 
   deleteNote(id: number){
@@ -51,7 +50,7 @@ export class NoteCardComponent implements OnInit {
     const dialogRef = this.dialog.open(NoteDetailsComponent);
     dialogRef.componentInstance.notes = this.notes;
     dialogRef.afterClosed().subscribe(result => {
-      //console.log(`Dialog result: ${result}`);
+      
     });
   }
 }

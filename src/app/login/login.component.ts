@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
 
   loginProcess(){
     if(this.formGroup.valid){
-      console.log(this.formGroup.value);
       this.authService.login(this.formGroup.value).subscribe(response =>{
         if(response.success){
           localStorage.setItem("token",response.token);

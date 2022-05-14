@@ -49,7 +49,7 @@ export class NoteListComponent implements OnInit {
     const dialogRef = this.dialog.open(NoteDetailsComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      //console.log(`Dialog result: ${result}`);
+      
     });
   }
 }

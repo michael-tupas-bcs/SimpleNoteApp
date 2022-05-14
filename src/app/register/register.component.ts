@@ -26,10 +26,8 @@ export class RegisterComponent implements OnInit {
   hide = true;
 
   registerProcess(){
-    console.log(this.formGroup.value);
     if(this.formGroup.valid){
       this.authService.register(this.formGroup.value).subscribe(result =>{
-        //console.log(result);
         if(result.success){
           alert(result.message);
           this.router.navigate(['login']);
